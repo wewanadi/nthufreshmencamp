@@ -13,9 +13,9 @@
 
   </head>
   <body style="background-color:#000000;">
-     <div style=" object-fit:cover;object-position:50% 50%;width:1600px;">
-        <img id="bg2" src="static/123-board.png" alt="center" style="width:1600px;position: absolute;top:0;left:0;">       
-        <img id="bg1" src="static/123-dark.png" alt="center" style="width:1600px;opacity: 1; position: absolute;top:0;left:0;"> 
+     <div style=" object-fit:cover;object-position:50% 50%;width:1700px;">
+        <img id="bg2" src="static/123-board.png" alt="center" style="width:1700px;position: absolute;top:0;left:0;">       
+        <img id="bg1" src="static/123-dark.png" alt="center" style="width:1700px;opacity: 1; position: absolute;top:0;left:0;"> 
         <button id = "light"><img id = "turn" src= "static/123-turnoff.png" style="position: absolute;top: 1cm;left : 1500px; object-position: center center;" width = "50px"></button>
         <div id = "board" class="color-lump" style="position: absolute; top:5cm; left:400px;" ></div>
     </div>
@@ -31,16 +31,16 @@
         board.onclick = function(){
             if (first==1){ 
                 click = click -1;
-                if (click == 9) {bg1.style = "width:1600px;opacity: 0.9; position: absolute;top:0;left:0;";}
-                if (click == 8) {bg1.style = "width:1600px;opacity: 0.8; position: absolute;top:0;left:0;";}
-                if (click == 7) {bg1.style = "width:1600px;opacity: 0.7; position: absolute;top:0;left:0;";}
-                if (click == 6) {bg1.style = "width:1600px;opacity: 0.6; position: absolute;top:0;left:0;";}
-                if (click == 5) bg1.style = "width:1600px;opacity: 0.5; position: absolute;top:0;left:0;";
-                if (click == 4) bg1.style = "width:1600px;opacity: 0.4; position: absolute;top:0;left:0;";
-                if (click == 3) bg1.style = "width:1600px;opacity: 0.3; position: absolute;top:0;left:0;";
-                if (click == 2) bg1.style = "width:1600px;opacity: 0.2; position: absolute;top:0;left:0;";
-                if (click == 1) bg1.style = "width:1600px;opacity: 0.1; position: absolute;top:0;left:0;";
-                if (click == 0) bg1.style = "width:1600px;opacity: 0; position: absolute;top:0;left:0;";
+                if (click == 9) {bg1.style = "width:1700px;opacity: 0.9; position: absolute;top:0;left:0;";}
+                if (click == 8) {bg1.style = "width:1700px;opacity: 0.8; position: absolute;top:0;left:0;";}
+                if (click == 7) {bg1.style = "width:1700px;opacity: 0.7; position: absolute;top:0;left:0;";}
+                if (click == 6) {bg1.style = "width:1700px;opacity: 0.6; position: absolute;top:0;left:0;";}
+                if (click == 5) bg1.style = "width:1700px;opacity: 0.5; position: absolute;top:0;left:0;";
+                if (click == 4) bg1.style = "width:1700px;opacity: 0.4; position: absolute;top:0;left:0;";
+                if (click == 3) bg1.style = "width:1700px;opacity: 0.3; position: absolute;top:0;left:0;";
+                if (click == 2) bg1.style = "width:1700px;opacity: 0.2; position: absolute;top:0;left:0;";
+                if (click == 1) bg1.style = "width:1700px;opacity: 0.1; position: absolute;top:0;left:0;";
+                if (click == 0) bg1.style = "width:1700px;opacity: 0; position: absolute;top:0;left:0;";
             };
         };
 
