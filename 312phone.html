@@ -26,25 +26,26 @@
                                 background-color: rgba(204, 80, 23, 0);
                                 z-index: 29" >
         </div>
-        <div id = "touch" ontouchstart = "holdDown()" ontouchend = "holdUp()" onmousedown="holdDown()" onmouseup="holdUp()" style="position: absolute;top:3000px;left:650px; display:block; margin:auto;
+        <div id = "but3" ontouchstart = "holdDown()"ontouchend="holdUp()"onmousedown="holdDown()" onmouseup="holdUp()" style="position: absolute;top:3000px;left:650px; display:block; margin:auto;
                                 width: 450px;
                                 height: 450px;
                                 background-color: rgba(204, 80, 23, 0);
                                 z-index: 28" >
         </div>
-        <!-- <div id="" type="button" ontouchstart = "holdDown()" ontouchend = "holdUp()" onmousedown="holdDown()" onmouseup="holdUp()" style="position: absolute;top:3000px;left:650px; display:block; margin:auto;
-        width: 450px;
-        height: 450px;
-        background-color: rgba(204, 80, 23, 0);
-        z-index: 28"/> -->
-        
+        <div id = "but4" style="position: absolute;top:2750px;left:650px; display:block; margin:auto;
+                                width: 420px;
+                                height: 250px;
+                                background-color: rgba(204, 80, 23, 1);
+                                z-index: 29" >
+        </div>
+
 
     </div>
     <script>
         var bg = document.getElementById("bg1");
         var but1 = document.getElementById("but1");
         var but2 = document.getElementById("but2");
-        // var but3 = document.getElementById("touch");
+        var but4 = document.getElementById("but4");
         var round = 0
 
         but1.onclick = function() {
@@ -55,11 +56,11 @@
 
 
         but2.onclick = function() {
-            if (round=1){
+            if (round==1){
                 bg.src = "static/312phone/312lock.jpg";
                 round = 2;
                 but2.innerHTML = "";
-            }
+            };
         };
 
         var timeStart, timeEnd, time;
@@ -69,26 +70,22 @@
         }   
 
         function holdDown() {
-            timeStart = getTimeNow();
-            time = setInterval(function () {
-                if (round=2){
-                    timeEnd = getTimeNow();
-                    if (timeEnd - timeStart > 1500) {
-                        clearInterval(time);
-                        bg.src = "static/312phone/312desktop1.jpg";
-                        round = 3;
-                    }
-                }
-        }, 50);
+            if (round==2){            
+                timeStart = getTimeNow();
+                time = setInterval(function () {
+                        timeEnd = getTimeNow();
+                        if (timeEnd - timeStart > 1500) {
+                            clearInterval(time);
+                            bg.src = "static/312phone/312desktop1.jpg";
+                            round = 3;
+                        };
+                }, 50);
+            }
 
         function holdUp() {
             clearInterval(time);
             }
         }
-
-        
-
-
 
     </script>
   </body>
