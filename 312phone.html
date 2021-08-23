@@ -1,40 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Find Me</title>
+    <style>
+        .color-lump{
+            width: 800px;
+            height: 200px;
+            background-color: #33cd5f;
+        }
+    </style>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>点击按钮切换图片</title>
-</head>
-
-<body>
-    <input type="button" value="点击" id="btn"><br>
-    <img src="static/123-dark.png" alt="" id="pic">
-    <body style="background-color:#000000;">
-      <div style="text-align: center; width:99%; border: green solid 0px;">
-         <img id="bg" src="static/123-dark.png" alt="center" style="width:979px;height:2082px;object-fit:cover;object-position:50% 50%">
- 
-     </div>
+  </head>
+  <body style="background-color:#000000;">
+     <div style=" object-fit:cover;object-position:50% 50%;width:1600px;">
+        <img id="bg2" src="static/123-board.png" alt="center" style="width:1600px;position: absolute;">       
+        <img id="bg1" src="static/123-dark.png" alt="center" style="width:1600px;opacity: 1; position: absolute;"> 
+        <button id = "light"><img id = "turn" src= "static/123-turnoff.png" style="position: absolute;top: 1cm;left : 1500px; object-position: center center;" width = "50px"></button>
+        <div id = "board" class="color-lump" style="position: absolute; top:5cm; left:400px;" ></div>
+    </div>
 
     <script>
-        // 获取元素
-        var btn = document.getElementById("btn");
-        var pic = document.getElementById("pic");
-        // 通过一个变量作为判断条件，变量值为1，认为加载的是 a 图片，如果变量为2，认为加载的是 b 图片
-        var num = 1;
-        // 给按钮添加点击事件
-        btn.onclick = function() {
-            // 给图片换 src 的属性值
-            // 通过 if 语句判断，如果是 a 图片，就换成 b 图片，反之换成 a 图片
-            if (num === 1) {
-                pic.src = "static/123-light.png";
-                num = 2;
-            } else {
-                pic.src = "images/a.jpg";
-                num = 1;
-            }
-        };
-    </script>
-</body>
+        var bg = document.getElementById("bg1");
+        var button = document.getElementById("light");
+        var turn = document.getElementById("turn");
+        var first = 0;
+        var click = 10;
 
+        var board = document.getElementById("board");
+        board.onclick = function(){
+            if (first==1){ 
+                click = click -1;
+                if (click == 9) {bg1.style = "width:1600px;opacity: 0.9; position: absolute;";}
+                if (click == 8) {bg1.style = "width:1600px;opacity: 0.8; position: absolute;";}
+                if (click == 7) {bg1.style = "width:1600px;opacity: 0.7; position: absolute;";}
+                if (click == 6) {bg1.style = "width:1600px;opacity: 0.6; position: absolute;";}
+                if (click == 5) bg1.style = "width:1600px;opacity: 0.5; position: absolute;";
+                if (click == 4) bg1.style = "width:1600px;opacity: 0.4; position: absolute;";
+                if (click == 3) bg1.style = "width:1600px;opacity: 0.3; position: absolute;";
+                if (click == 2) bg1.style = "width:1600px;opacity: 0.2; position: absolute;";
+                if (click == 1) bg1.style = "width:1600px;opacity: 0.1; position: absolute;";
+                if (click == 0) bg1.style = "width:1600px;opacity: 0; position: absolute;";
+            };
+        };
+
+        button.onclick = function() {
+            bg.src = "static/123-light.png";
+            turn.src = "static/123-turnon.png";
+            first = 1;
+        };
+
+    </script>
+  </body>
 </html>
