@@ -10,7 +10,7 @@ def index():
 
 @app.route('/touch')
 def touch():
-    return render_template("touch.html")
+    return render_template("index.html")
 
 @app.route('/find')
 def find():
