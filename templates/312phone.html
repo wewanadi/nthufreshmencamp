@@ -5,45 +5,66 @@
     <title>31255phone網址名</title>
     <!-- <meta name="viewport" content="width=device-width height=device-height, initial-scale=1.0"> -->
     <style>
-        .color-lump{
-            width: 800px;
-            height: 200px;
-            background-color: #33cd5f;
-        }
+
 
     </style>
 
   </head>
   <body style="background-color:#000000;">
     <div style = "object-fit:cover;object-position:50% 50%;width:1600px;">
-        <!-- <div>   -->
-            <img id="bg1" src="static/312phone/312sir1.jpg" alt="center" style="width:1670px;position: absolute;top:0;left:0;" > 
-        <!-- </div> -->
-        <div id = "board" class="color-lump" style="position: absolute;top:10cm;left:0; display:block; margin:auto;" ></div>
+        <img id="bg1" src="static/312phone/312sir1.jpg" alt="center" style="width:1670px;position: absolute;top:0;left:0;" > 
+        <div id = "but1" style="position: absolute;top:2750px;left:550px; display:block; margin:auto;
+                                width: 590px;
+                                height: 280px;
+                                background-color: rgba(204, 80, 23, 0);
+                                z-index: 30" >
+        </div>
+        <div id = "but2" style="position: absolute;top:1620px;left:650px; display:block; margin:auto;
+                                width: 420px;
+                                height: 250px;
+                                background-color: rgba(204, 80, 23, 0);
+                                z-index: 29" >
+        </div>
+        <div id = "touch" style="position: absolute;top:3000px;left:650px; display:block; margin:auto;
+                                width: 450px;
+                                height: 450px;
+                                background-color: rgba(204, 80, 23, 1);
+                                z-index: 28" >
+        </div>
     </div>
     <script>
         var bg = document.getElementById("bg1");
-        var button = document.getElementById("light");
-        var turn = document.getElementById("turn");
-        var first = 0;
-        var click = 10;
+        var but1 = document.getElementById("but1");
+        var but2 = document.getElementById("but2");
+        var but3 = document.getElementById("touch");
+        var round = 0
 
-        var board = document.getElementById("board");
-        board.onclick = function(){
-            if (first==1){ 
-                click = click -1;
-                if (click == 9) {bg1.style = "width:1600px;opacity: 0.9; position: absolute;";}
-                if (click == 8) {bg1.style = "width:1600px;opacity: 0.8; position: absolute;";}
-                if (click == 7) {bg1.style = "width:1600px;opacity: 0.7; position: absolute;";}
-                if (click == 6) {bg1.style = "width:1600px;opacity: 0.6; position: absolute;";}
-                if (click == 5) bg1.style = "width:1600px;opacity: 0.5; position: absolute;";
-                if (click == 4) bg1.style = "width:1600px;opacity: 0.4; position: absolute;";
-                if (click == 3) bg1.style = "width:1600px;opacity: 0.3; position: absolute;";
-                if (click == 2) bg1.style = "width:1600px;opacity: 0.2; position: absolute;";
-                if (click == 1) bg1.style = "width:1600px;opacity: 0.1; position: absolute;";
-                if (click == 0) bg1.style = "width:1600px;opacity: 0; position: absolute;";
-            };
+        but1.onclick = function() {
+            bg.src = "static/312phone/312sir2.jpg";
+            round = 1;
+            but1.innerHTML = "";
         };
+
+
+        but2.onclick = function() {
+            if (round=1){
+                bg.src = "static/312phone/312lock.jpg";
+                round = 2;
+                but2.innerHTML = "";
+            }
+        };
+
+        but3.onclick = function() {
+            if (round=2){
+                bg.src = "static/312phone/312lock.jpg";
+                round = 3;
+                but3.innerHTML = "";
+            }
+        };
+
+        
+
+
 
     </script>
   </body>
