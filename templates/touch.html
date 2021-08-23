@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript label example</title>
+    <style>
+      p {
+        font-family: 'helvetica neue', helvetica, sans-serif;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: center;
+        border: 2px solid rgba(220,220,220,0.6);
+        background: rgba(220,220,200,0.3);
+        color: rgba(220,220,200,0.6);
+        box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
+        border-radius: 10px;
+        padding: 3px 10px;
+        display: inline-block;
+        cursor: pointer;
+      }
+      header {
+        height: 500px;
+        background-color: rgb(255, 255, 255);
+        background-image: url(http://127.0.0.1:5000/static/touch.png);
+        background-size: cover;
+        background-position: bottom center;
+      }
+    </style>
+  </head>
+    <div class="container">
+      <header class="header"></header>
+    </div>
+    
+    <div class="container mt-3" style="width: 480px">
+      <header class="header"></header>
+    </div>
+    
+    <!-- <img src="/static/touch.png"> -->
+    <p>Player 1: Chris</p>
+    <p>Player 3: Chris</p>
+    
+
+    <script>
+      var paras = document.querySelectorAll('p');
+
+      paras.forEach(function(para) {
+      para.addEventListener('click', updateName);
+      });
+
+      function updateName() {
+        let name = prompt('Enter a new name\napple');
+        para.textContent = 'Player 1: ' + name;
+      }
+    </script>
+  </body>
+</html>
