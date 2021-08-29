@@ -51,6 +51,8 @@ body .password-holder {
   position: relative;
   padding: 16px 0 5px 0;
   border-radius: 6px;
+  margin: 20px;
+
 }
 body .password-holder input {
   width: 100%;
