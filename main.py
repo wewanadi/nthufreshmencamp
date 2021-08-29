@@ -16,6 +16,10 @@ def touch():
 def find():
     return render_template("123dark.html")
 
+@app.route('/45zzzz')
+def zzz():
+    return render_template("45zzzz2.html")
+
     
 
 
