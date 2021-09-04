@@ -18,7 +18,7 @@ $(function() {
         .to($('body'), 0.15, { backgroundColor: '#EDF0F9' }, "+=0.65")
         .to(errorMessage, 0.15, { autoAlpha: 0, y: 0 }, "-=0.15");
         msg.textContent = "Correct, Loading...";
-        setTimeout(() => {          window.location.href = "https://sites.google.com/view/nthurationing-101987321";}, 1500);
+        setTimeout(() => {          window.location.href = "https://sites.google.com/view/nthurationing-plan-101987321";}, 1500);
 
         }
         else{
