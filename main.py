@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template
 app = Flask(
-__name__, static_url_path='/',
+__name__, static_url_path='/static/',
 # static_folder='/path/to/static/folder'
 )
 
@@ -10,7 +10,7 @@ def index():
 
 @app.route('/touch')
 def touch():
-    return render_template("45system.html")
+    return render_template("45line.html")
 
 @app.route('/find1')
 def find():
@@ -23,7 +23,7 @@ def aaa():
 
 @app.route('/45zzzz')
 def zzz():
-    return render_template("45zzzz2.html")
+    return render_template("45zzzz.html")
 
     
 

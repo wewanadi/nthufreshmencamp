@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>H5lock</title>
+    <title>偷看人家手機不好吧</title>
     <style type="text/css">
         body {
             text-align: center;
-            background-color: #000000;
+            background-color: #efefed;
         }
         .title {
             /*color: #87888a;*/
@@ -18,8 +18,8 @@
     </style>
 </head>
 <body>
-    <div id = 'apple' style="color:#00D600;border:1px blue solid;padding:0px;">
-        這是 DIV 區塊內的文字，padding 設為 0px。
+    <div id = 'apple' style="color:#87888a;border:1px #87888a solid;padding:0px;">
+        請以手機操作
         </div>
 <script>
 (function(){
@@ -113,10 +113,10 @@
                 this.drawCle(this.arr[i].x, this.arr[i].y);
             }
 
-            this.drawPoint('#27AED5');// 每帧花轨迹
-            this.drawStatusPoint('#27AED5');// 每帧花轨迹
+            this.drawPoint('#5a5a5a');// 每帧花轨迹
+            this.drawStatusPoint('#5a5a5a');// 每帧花轨迹
 
-            this.drawLine('#27AED5',po , this.lastPoint);// 每帧画圆心
+            this.drawLine('#5a5a5a',po , this.lastPoint);// 每帧画圆心
 
 // if (this.lastPoint.length == 4) {
 //     // debugger
@@ -167,14 +167,14 @@
             } else {
                 if (this.checkPass(this.pswObj.spassword, psw)) {
                     var title = document.getElementById("title");
-                    title.style.color = "#2CFF26";
-                    title.innerHTML = '解锁成功';
+                    title.style.color = "#93d7d6";
+                    title.innerHTML = '解鎖成功';
 
-                    this.drawStatusPoint('#2CFF26');//小点点外圈高亮
-                    this.drawPoint('#2CFF26');
-                    this.drawLine('#2CFF26',this.lastPoint[this.lastPoint.length-1] , this.lastPoint);// 每帧画圆心
+                    this.drawStatusPoint('#93d7d6');//小点点外圈高亮
+                    this.drawPoint('#93d7d6');
+                    this.drawLine('#93d7d6',this.lastPoint[this.lastPoint.length-1] , this.lastPoint);// 每帧画圆心
                     // setTimeout("javascript:location.href=‘312phone.html‘", 5000);
-                    window.location.href="touch";
+                    setTimeout(() => {          window.location.href = "touch";}, 1500);
 
                 } else if (psw.length < 4) {
                     
@@ -182,9 +182,9 @@
                     this.drawPoint('red');
                     this.drawLine('red',this.lastPoint[this.lastPoint.length-1] , this.lastPoint);// 每帧画圆心
 
-                    var title = document.getElementById("title");
-                    title.style.color = "red";
-                    title.innerHTML = '请连接4个点';
+                    var title = document.getlementById("title");
+                    title.style.color = '#101010';
+                    title.innerHTML = '你好短ㄛ';
 
                 } else {
                     this.drawStatusPoint('red');
@@ -194,7 +194,9 @@
 
                     var title = document.getElementById("title");
                     title.style.color = "red";
-                    title.innerHTML = '密码错误，您还可以输入N次';
+                    title.innerHTML = 'PIN 碼錯誤';
+                    setTimeout(() => {          title.innerHTML = '解鎖圖形以啟用手機';
+                                                title.style = "color:#505254"}, 1500);
                 }
             } 
             // else {
@@ -234,13 +236,13 @@
         }
         H5lock.prototype.initDom = function(){
             var wrap = document.createElement('div');
-            var str = '<h4 id="title" class="title" style="color:#87888a">解鎖圖形以啟用手機</h4>'+
+            var str = '<h4 id="title" class="title" style="color:#505254">解鎖圖形以啟用手機</h4>'+
                       '<a id="updatePassword" style="position: absolute;right: 5px;top: 5px;color:#fff;font-size: 10px;display:none;">重置密码</a>';
 
             wrap.setAttribute('style','position: absolute;top:0;left:0;right:0;bottom:0;');
             var canvas = document.createElement('canvas');
             canvas.setAttribute('id','canvas');
-            canvas.style.cssText = 'background-color: #000;display: inline-block;margin-top: 76px;';
+            canvas.style.cssText = 'background-color: #efefed ;display: inline-block;margin-top: 76px;';
             wrap.innerHTML = str;
             wrap.appendChild(canvas);
 
