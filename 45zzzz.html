@@ -178,22 +178,24 @@
 
                 } else if (psw.length < 4) {
                     
-                    this.drawStatusPoint('101010');
-                    this.drawPoint('101010');
-                    this.drawLine('101010',this.lastPoint[this.lastPoint.length-1] , this.lastPoint);// 每帧画圆心
+                    this.drawStatusPoint('#990036');
+                    this.drawPoint('#990036');
+                    this.drawLine('#990036',this.lastPoint[this.lastPoint.length-1] , this.lastPoint);// 每帧画圆心
 
                     var title = document.getlementById("title");
-                    title.style.color = '#101010';
+                    title.style.color = '##990036';
                     title.innerHTML = '你好短ㄛ';
+                    setTimeout(() => {          title.innerHTML = '解鎖圖形以啟用手機';
+                                                title.style = "color:#87888a"}, 1500);
 
                 } else {
-                    this.drawStatusPoint('101010');
-                    this.drawPoint('101010');
-                    this.drawLine('101010',this.lastPoint[this.lastPoint.length-1] , this.lastPoint);// 每帧画圆心
+                    this.drawStatusPoint('#990036');
+                    this.drawPoint('#990036');
+                    this.drawLine('#990036',this.lastPoint[this.lastPoint.length-1] , this.lastPoint);// 每帧画圆心
 
 
                     var title = document.getElementById("title");
-                    title.style.color = "101010";
+                    title.style.color = "#990036";
                     title.innerHTML = 'PIN 碼錯誤';
                     setTimeout(() => {          title.innerHTML = '解鎖圖形以啟用手機';
                                                 title.style = "color:#87888a"}, 1500);
