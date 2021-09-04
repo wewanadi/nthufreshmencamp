@@ -12,9 +12,14 @@ def index():
 def touch():
     return render_template("45system.html")
 
-@app.route('/find')
+@app.route('/find1')
 def find():
-    return render_template("123party.html")
+    return render_template("123sleep1.html")
+
+@app.route('/find2')
+def aaa():
+    return render_template("123sleep2.html")
+
 
 @app.route('/45zzzz')
 def zzz():
