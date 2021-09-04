@@ -104,7 +104,7 @@ var has3d,
 
   // Number of pages in the DOM, minimum value: 6
 
-  pagesInDOM = 20,
+  pagesInDOM = 6,
   
 
 turnMethods = {
@@ -130,7 +130,6 @@ turnMethods = {
       direction: this.attr('dir') || this.css('direction') || 'ltr'
     }, turnOptions, options);
 
-    options.pages = 10;
     data.opts = options;
     data.pageObjs = {};
     data.pages = {};

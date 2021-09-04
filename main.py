@@ -1,12 +1,12 @@
 from flask import Flask, request, render_template
 app = Flask(
-__name__, static_url_path='/',
+__name__, static_url_path='/static',
 # static_folder='/templates'
 )
 
-@app.route('/45system')
+@app.route('/45diary')
 def index():
-    return render_template("45system.html")
+    return render_template("45diary.html")
 
 @app.route('/touch')
 def touch():
