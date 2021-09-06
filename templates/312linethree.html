@@ -14,11 +14,39 @@
   <body style="background-color:#000000;">
     <div style = "object-fit:cover;object-position:50% 50%;width:1670px;">
         <img id="bg1" src="static/312phone/9_b_three.jpg" alt="center" style="width:1670px;position: absolute;top:0;left:0;" > 
-
-
+        <div id = "but1" style="position: absolute;top:3400px;left:170px; display:block; margin:auto;
+                                width: 1000px;
+                                height: 1500px;
+                                background-color: rgba(204, 80, 23, 0);
+                                z-index: 30" >
+        </div>
+        <div id = "but2" style="position: absolute;top:6400px;left:600px; display:block; margin:auto;
+                                width: 1060px;
+                                height: 1200px;
+                                background-color: rgba(204, 80, 23, 0);
+                                z-index: 30" >
+        </div>
+        <div id = "but3" style="position: absolute;top:8200px;left:600px; display:block; margin:auto;
+        width: 1060px;
+        height: 600px;
+        background-color: rgba(204, 80, 23, 0);
+        z-index: 30" >
+        </div>
     </div>
     <script>
+        var but1 = document.getElementById("but1");
+        var but2 = document.getElementById("but2");
+        var but3 = document.getElementById("but3");
 
+        but1.onclick = function() {
+                window.location.href="static/312phone/9_1_ig3_acceptance.jpg";
+            };
+        but2.onclick = function() {
+                window.location.href="static/312phone/9_2_tigerandbird.jpg";
+            };
+        but3.onclick = function() {
+                window.location.href="static/312phone/rot13.jpg";
+            };
 
     </script>
   </body>

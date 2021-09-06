@@ -14,10 +14,29 @@
   <body style="background-color:#000000;">
     <div style = "object-fit:cover;object-position:50% 50%;width:1670px;">
         <img id="bg1" src="static/312phone/8_c_dragon.jpg" alt="center" style="width:1670px;position: absolute;top:0;left:0;" > 
-
-
+        <div id = "but1" style="position: absolute;top:1900px;left:170px; display:block; margin:auto;
+                                width: 800px;
+                                height: 1450px;
+                                background-color: rgba(204, 80, 23, 0);
+                                z-index: 30" >
+        </div>
+        <div id = "but2" style="position: absolute;top:3500px;left:170px; display:block; margin:auto;
+                                width: 1100px;
+                                height: 1400px;
+                                background-color: rgba(204, 80, 23, 0);
+                                z-index: 30" >
+        </div>
     </div>
     <script>
+        var but1 = document.getElementById("but1");
+        var but2 = document.getElementById("but2");
+
+        but1.onclick = function() {
+                window.location.href="static/312phone/8_1_dragongame_bully.jpg";
+            };
+        but2.onclick = function() {
+                window.location.href="static/312phone/8_2_dcard_dargongame.jpg";
+            };
 
 
     </script>
