@@ -29,6 +29,21 @@ def zzz():
 def book():
     return render_template("45book.html")
 
+@app.route('/312phone')
+def phone():
+    return render_template("312phone.html")
+
+@app.route('/312linethree')
+def qq():
+    return render_template("312linethree.html")
+
+@app.route('/312linedragon')
+def ww():
+    return render_template("312linedragon.html")
+
+@app.route('/312linebird')
+def ee():
+    return render_template("312linebird.html")
 
 
 

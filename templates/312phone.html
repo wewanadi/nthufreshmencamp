@@ -13,7 +13,8 @@
   </head>
   <body style="background-color:#000000;">
     <div style = "object-fit:cover;object-position:50% 50%;width:1670px;">
-        <img id="bg1" src="static/312phone/312sir1.jpg" alt="center" style="width:1670px;position: absolute;top:0;left:0;" > 
+        <img id="bg1" src="static/312phone/1_sheriff1.jpg" alt="center" style="width:1670px;position: absolute;top:0;left:0;" > 
+        <!-- <img id="bg1" src="static/312phone/6_linechats.jpg" alt="center" style="width:1670px;position: absolute;top:0;left:0;" >  -->
         <div id = "but1" style="position: absolute;top:2750px;left:550px; display:block; margin:auto;
                                 width: 590px;
                                 height: 280px;
@@ -38,6 +39,24 @@
                                 background-color: rgba(204, 80, 23, 0);
                                 z-index: 27" >
         </div>
+        <div id = "but5" style="position: absolute;top:700px;left:0px; display:block; margin:auto;
+        width: 1650px;
+        height: 330px;
+        background-color: rgba(204, 80, 23,0);
+        z-index: 26" >
+        </div>
+        <div id = "but6" style="position: absolute;top:1035px;left:0px; display:block; margin:auto;
+        width: 1650px;
+        height: 330px;
+        background-color: rgba(204, 80, 23 ,0);
+        z-index: 25" >
+        </div>
+        <div id = "but7" style="position: absolute;top:1370px;left:0px; display:block; margin:auto;
+        width: 1650px;
+        height: 330px;
+        background-color: rgba(204, 80, 23, 0);
+        z-index: 24" >
+        </div>
 
 
     </div>
@@ -47,12 +66,15 @@
         var but2 = document.getElementById("but2");
         var but3 = document.getElementById("but3");
         var but4 = document.getElementById("but4");
+        var but5 = document.getElementById("but5");
+        var but6 = document.getElementById("but6");
+        var but7 = document.getElementById("but7");
         let round = 0;
         var long = 1500;
 
         but1.onclick = function() {
             if (round==0){
-                bg.src = "static/312phone/312sir2.jpg";
+                bg.src = "static/312phone/2_sheriff2.jpg";
                 round = 1;
                 but1.innerHTML = "";
             };
@@ -61,16 +83,8 @@
 
         but2.onclick = function() {
             if (round==1){
-                bg.src = "static/312phone/312lock.jpg";
+                bg.src = "static/312phone/3_unlock.jpg";
                 round = 2;
-                but2.innerHTML = "";
-            };
-        };
-
-        but4.onclick = function() {
-            if (round==3){
-                bg.src = "static/312phone/312line.jpg";
-                round = 4;
                 but2.innerHTML = "";
             };
         };
@@ -88,7 +102,7 @@
                         timeEnd = getTimeNow();
                         if (timeEnd - timeStart > long) {
                             // clearInterval(time);
-                            bg.src = "static/312phone/312desktop1.jpg";
+                            bg.src = "static/312phone/4_wallpaper1.jpg";
                             round = 3;
                             but3.style = "width: 450px;height: 450px;"
                             long = 10000000000;
@@ -101,6 +115,35 @@
             clearInterval(time);
             }
         }
+
+        but4.onclick = function() {
+            if (round==3){
+                bg.src = "static/312phone/6_linechats.jpg";
+                round = 4;
+                but4.innerHTML = "";
+            };
+        };
+
+        but5.onclick = function() {
+            if (round>=4){
+                round = 5;
+                window.open("/312linebird")
+            };
+        };
+
+        but6.onclick = function() {
+            if (round>=5){
+                round = 6;
+                window.open("/312linedragon")
+            };
+        };
+
+        but7.onclick = function() {
+            if (round>=6){
+                round = 7;
+                window.open("/312linethree")
+            };
+        };
 
 
 
