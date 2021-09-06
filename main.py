@@ -45,6 +45,9 @@ def ww():
 def ee():
     return render_template("312linebird.html")
 
+@app.route('/312line')
+def ss():
+    return render_template("312line.html")
 
 
 if __name__ == '__main__':
