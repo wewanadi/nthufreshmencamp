@@ -19,7 +19,7 @@ timeline.to(".bend", 0, { width: "0" }, 0)
         .to(".content-inner", transitionSpeed, { opacity: 1 }, transitionSpeed);
 
 $cover.on("click", function(){  
-  $hint.text("* 滑動翻頁哦");
+  $hint.text("滑動翻頁");
   timeline.play();
   $(".content").addClass("active");
   $pages.turn({
