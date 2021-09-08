@@ -53,8 +53,8 @@
 
     <div id = 'apple' style="color:#87888a;border:1px #87888a solid;padding:0px;">
       &emsp;密碼提示 2003XXXX&emsp;
-      </div> -->
-    COIDEA:demo END
+      </div>
+    <!-- COIDEA:demo END -->
 	
 	<script src="assets/js/jquery-1.11.0.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
@@ -70,7 +70,7 @@ $('.password-holder .unlock').click(function(e) {
   var msg = document.getElementById("message");
 
   if(passwordDiv.children('input').val()) {
-      if (pwd==="0417"){
+      if (pwd==="0908"){
     var tl = new TimelineMax();
     tl.fromTo(passwordDiv, 0.3, {x:-1}, { x:1, ease:RoughEase.ease.config({ strength:8, points:40, template:Linear.easeNone, randomize:false }) , clearProps:"x" })
       .to($('body'), 0.15, { backgroundColor: 'green' })
