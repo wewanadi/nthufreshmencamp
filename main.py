@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template
 app = Flask(
-__name__, static_url_path='/static',
+__name__, static_url_path='/',
 # static_folder='/templates'
 )
 
@@ -45,9 +45,9 @@ def ww():
 def ee():
     return render_template("312linebird.html")
 
-@app.route('/312line')
+@app.route('/312pwd')
 def ss():
-    return render_template("312line.html")
+    return render_template("312pwd.html")
 
 
 if __name__ == '__main__':
