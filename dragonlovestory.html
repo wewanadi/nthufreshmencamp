@@ -24,7 +24,8 @@
         <div id = "light" style=" width: 290px;height: 500px; background-color: rgba(204, 80, 23, 0);position: absolute;top:2280px; left:1260px; object-position: center center;" width = "50px"></div>
         <div id = "phone" style=" width: 100px;height: 140px; background-color: rgb(72, 126, 87, 0);position: absolute;top:520px; left:440px; object-position: center center;z-index: 29;" ></div>
         <div id = "board" class="color-lump" style="position: absolute; top:330px; left:0px;z-index: 28;" ></div>
-
+        <div id = "jump" style=" width: 170px;height: 170px; background-color: rgb(72, 126, 87, 0);position: absolute;top:2175px; left:740px; object-position: center center;z-index: 29;" ></div>
+ 
     </div>
 
     <script>
@@ -35,6 +36,7 @@
         var first = 0;
         var click = 10;
         var phone = document.getElementById("phone");
+        var jump = document.getElementById("jump");
 
         var board = document.getElementById("board");
         board.onclick = function(){
@@ -66,6 +68,12 @@
         phone.onclick = function() {
             if (click<2){
                 bg2.src = "static/123party/4phone.jpg"
+                first = 3;
+            };
+        };
+        jump.onclick = function() {
+            if (first==3){
+                window.location.href = "https://m.facebook.com/story.php?story_fbid=113193434422936&id=107246745017605";
             };
         };
 
