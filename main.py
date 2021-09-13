@@ -49,6 +49,10 @@ def ee():
 def ss():
     return render_template("312pwd.html")
 
+@app.route('/45map')
+def ff():
+    return render_template("45map.html")
+
 
 if __name__ == '__main__':
     app.debug = True
