@@ -17,9 +17,19 @@
         <img id="bg2" src="static/45/45chat2.jpg" alt="center" style="width:1600px;position: absolute;">       
         <!-- <img id="bg1" src="static/123-dark.png" alt="center" style="width:1600px;opacity: 1; position: absolute;">  -->
         <!-- <button id = "light"><img id = "turn" src= "static/123-turnoff.png" style="position: absolute;top: 1cm;left : 1500px; object-position: center center;" width = "50px"></button> -->
-        <!-- <div id = "board" class="color-lump" style="position: absolute; top:5cm; left:400px;" ></div> -->
+        <div id = "jump" class="color-lump" style="background-color: rgb(72, 126, 87); position: absolute; top:5cm; left:400px;" ></div>
     </div>
+    <script>
+        var jump = document.getElementById("jump");
+        var step = 0;
+        var bg = document.getElementById("bg2");
 
+        jump.onclick = function() {
+            if (step==0){
+              bg.src = "static/45speaking.jpg";
+              window.open("static/45/speak.m4a")
+            }
+        };
     </script>
   </body>
 </html>
