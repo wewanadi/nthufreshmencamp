@@ -52,7 +52,7 @@
       </svg>
     </div>
 
-    <div id = 'apple' style="color:#b1b1b1;border:1px #87888a solid;padding:0px;">
+    <div id = 'apple' style="color:#b1b1b1;border:1px #b1b1b1 solid;padding:0px;">
       &emsp;密碼提示 2003XXXX&emsp;
       </div>
     <!-- COIDEA:demo END -->
@@ -78,7 +78,7 @@ $('.password-holder .unlock').click(function(e) {
       .to(errorMessage, 0.15, { autoAlpha: 1, y: -16 }, "-=0.15")
       // .to(passwordDiv, 0.15, { className: "+=false" }, "-=0.15")
       .to(passwordDiv, 0.15, { className: "-=false" }, "+=2.5")
-      .to($('body'), 0.15, { backgroundColor: '#EDF0F9' }, "+=0.65")
+      .to($('body'), 0.15, { backgroundColor: '#000000' }, "+=0.65")
       .to(errorMessage, 0.15, { autoAlpha: 0, y: 0 }, "-=0.15");
       msg.textContent = "Correct, Loading...";
       setTimeout(() => {          window.location.href = "45diary";}, 150);
@@ -91,7 +91,7 @@ $('.password-holder .unlock').click(function(e) {
           .to(errorMessage, 0.15, { autoAlpha: 1, y: -16 }, "-=0.15")
           .to(passwordDiv, 0.15, { className: "+=false" }, "-=0.15")
           .to(passwordDiv, 0.15, { className: "-=false" }, "+=2.5")
-          .to($('body'), 0.15, { backgroundColor: '#EDF0F9' }, "+=0.65")
+          .to($('body'), 0.15, { backgroundColor: '#000000' }, "+=0.65")
           .to(errorMessage, 0.15, { autoAlpha: 0, y: 0 }, "-=0.15");
       }
   }
