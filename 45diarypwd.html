@@ -70,7 +70,7 @@ $('.password-holder .unlock').click(function(e) {
   var msg = document.getElementById("message");
 
   if(passwordDiv.children('input').val()) {
-      if (pwd==="0908"){
+      if (pwd==="20030831"){
     var tl = new TimelineMax();
     tl.fromTo(passwordDiv, 0.3, {x:-1}, { x:1, ease:RoughEase.ease.config({ strength:8, points:40, template:Linear.easeNone, randomize:false }) , clearProps:"x" })
       .to($('body'), 0.15, { backgroundColor: 'green' })
