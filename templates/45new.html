@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" /> -->
+    <title>我不想上早八</title>
+    <style>
+    </style>
+
+  </head>
+  <body style="background-color:#000000;">
+     <div style=" object-fit:cover;object-position:50% 50%;width:1600px;">
+        <img id="bg2" src="45/45new1.jpg" alt="center" style="width:1600px;position: absolute;">       
+        <!-- <img id="clock" src="static/123sleep/clock.jpg" alt="center" style="width:200px; top:1000px; left:1300xp; position: absolute;">        -->
+        <!-- <div id = "jump" style=" width: 800px;height: 540px; background-color: rgb(72, 126, 87, 0);position: absolute;top:200px; left:600px; object-position: center center;z-index: 29;" ></div> -->
+    </div>
+
+    <script>
+        var bg = document.getElementById("bg2");
+        var clock = document.getElementById("clock");
+        var jump = document.getElementById("jump");
+        var step = 0;
+        clock.onclick = function() {
+            // bg.src = "static/123sleep/2 wake up.png";
+            // turn.src = "static/123-turnon.png";
+            step = 1;
+        };
+        jump.onclick = function() {
+            if (step==1){
+                window.location.href="123pwd";
+            }
+        };
+    </script>
+  </body>
+</html>

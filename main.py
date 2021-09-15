@@ -12,9 +12,9 @@ def index():
 def touch():
     return render_template("45line.html")
 
-@app.route('/find1')
+@app.route('/45new')
 def find():
-    return render_template("123sleep1.html")
+    return render_template("45new.html")
 
 @app.route('/find2')
 def aaa():
@@ -29,9 +29,9 @@ def zzz():
 def book():
     return render_template("45book.html")
 
-@app.route('/312phone')
+@app.route('/45system')
 def phone():
-    return render_template("312phone.html")
+    return render_template("45system.html")
 
 @app.route('/312linethree')
 def qq():
