@@ -3,17 +3,15 @@
   <head>
     <meta charset="utf-8">
     <!-- <meta name="viewport" content="height = device-height, initial-scale=1.0,maximum-scale=1.0,user-scalable=0" /> -->
-    <title>我在新體，你在心裡。</title>
+    <title>今晚，我想來點～</title>
     <style>
     </style>
 
   </head>
   <body style="background-color:#000000;">
      <div style=" object-fit:cover;object-position:50% 50%;width:1600px;">
-        <img id="bg2" src="45/img1.jpg" alt="center" style="width:1600px;position: absolute;">       
+        <img id="bg2" src="45/img4.jpg" alt="center" style="width:1600px;position: absolute;">       
         <div id = "jump1" style=" width: 150px;height: 250px; background-color: rgb(72, 126, 87, 0);position: absolute;top:370px; left:190px; object-position: center center;z-index: 29;" ></div>
-        <div id = "jump2" style=" width: 200px;height: 380px; background-color: rgb(72, 126, 87, 0);position: absolute;top:370px; left:570px; object-position: center center;z-index: 29;" ></div>
-        <div id = "jump3" style=" width: 120px;height: 160px; background-color: rgb(72, 126, 87, 0);position: absolute;top:380px; left:900px; object-position: center center;z-index: 29;" ></div>
 
     </div>
 
@@ -24,7 +22,7 @@
         var jump3 = document.getElementById("jump3");
         var step = 0;
         bg.onclick = function() {
-            bg.src = "45/img3.jpg";
+            bg.src = "45/img6.jpg";
             step = 1;
         };
 
@@ -33,16 +31,7 @@
                 window.open("45/45c.jpg");
             }
         };
-        jump2.onclick = function() {
-            if (step==1){
-                window.open("45/45a.png");
-            }
-        };
-        jump3.onclick = function() {
-            if (step==1){
-                window.open("45/45b.pdf");
-            }
-        };
+
     </script>
   </body>
 </html>

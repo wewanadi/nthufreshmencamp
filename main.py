@@ -8,9 +8,9 @@ __name__, static_url_path='/',
 def index():
     return render_template("45diary.html")
 
-@app.route('/touch')
+@app.route('/45eat')
 def touch():
-    return render_template("45line.html")
+    return render_template("45eat.html")
 
 @app.route('/45new')
 def find():
