@@ -52,7 +52,7 @@
     </div>
 
     <div id = 'apple' style="color:#87888a;border:1px #87888a solid;padding:0px;">
-      &emsp;密碼是四位數哦。&emsp;
+      &emsp;密碼是八位數哦～叭～叭～叭～叭～～&emsp;
       </div>
     <!-- COIDEA:demo END -->
 	
@@ -70,7 +70,7 @@ $('.password-holder .unlock').click(function(e) {
   var msg = document.getElementById("message");
 
   if(passwordDiv.children('input').val()) {
-      if (pwd==="3121"){
+      if (pwd==="t1213121"){
     var tl = new TimelineMax();
     tl.fromTo(passwordDiv, 0.3, {x:-1}, { x:1, ease:RoughEase.ease.config({ strength:8, points:40, template:Linear.easeNone, randomize:false }) , clearProps:"x" })
       .to($('body'), 0.15, { backgroundColor: 'green' })
