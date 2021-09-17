@@ -73,7 +73,7 @@ $('.password-holder .unlock').click(function(e) {
       if (pwd==="t1213121"){
     var tl = new TimelineMax();
     tl.fromTo(passwordDiv, 0.3, {x:-1}, { x:1, ease:RoughEase.ease.config({ strength:8, points:40, template:Linear.easeNone, randomize:false }) , clearProps:"x" })
-      .to($('body'), 0.15, { backgroundColor: 'green' })
+      .to($('body'), 0.15, { backgroundColor: '#7A0000' })
       .to(errorMessage, 0.15, { autoAlpha: 1, y: -16 }, "-=0.15")
       // .to(passwordDiv, 0.15, { className: "+=false" }, "-=0.15")
       .to(passwordDiv, 0.15, { className: "-=false" }, "+=2.5")
