@@ -14,7 +14,7 @@
 </head>
 <body>
 	<!-- COIDEA:header START -->
-    <header class="coidea-header">
+    <header class="coidea-header" style="background-color: #262626;">
 
     </header>
     <!-- COIDEA:header END -->
@@ -77,7 +77,7 @@ $('.password-holder .unlock').click(function(e) {
       .to(errorMessage, 0.15, { autoAlpha: 1, y: -16 }, "-=0.15")
       // .to(passwordDiv, 0.15, { className: "+=false" }, "-=0.15")
       .to(passwordDiv, 0.15, { className: "-=false" }, "+=2.5")
-      .to($('body'), 0.15, { backgroundColor: '#EDF0F9' }, "+=0.65")
+      .to($('body'), 0.15, { backgroundColor: '#262626' }, "+=0.65")
       .to(errorMessage, 0.15, { autoAlpha: 0, y: 0 }, "-=0.15");
       msg.textContent = "Correct, Loading...";
       setTimeout(() => {          window.location.href = "static/Qinglong_file.docx";}, 150);
@@ -90,7 +90,7 @@ $('.password-holder .unlock').click(function(e) {
           .to(errorMessage, 0.15, { autoAlpha: 1, y: -16 }, "-=0.15")
           .to(passwordDiv, 0.15, { className: "+=false" }, "-=0.15")
           .to(passwordDiv, 0.15, { className: "-=false" }, "+=2.5")
-          .to($('body'), 0.15, { backgroundColor: '#EDF0F9' }, "+=0.65")
+          .to($('body'), 0.15, { backgroundColor: '#262626' }, "+=0.65")
           .to(errorMessage, 0.15, { autoAlpha: 0, y: 0 }, "-=0.15");
       }
   }
